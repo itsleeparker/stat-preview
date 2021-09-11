@@ -1,0 +1,155 @@
+@import url(https://fonts.google.com/specimen/Inter);
+:root{
+    /* PRIMARY COLORS */
+    --very-dark-blue:hsl(233, 47%, 7%);
+    --dark-saturated-blue:hsl(244, 38%, 16%);
+    --soft-voilet:hsl(277, 64%, 61%);
+
+    /* NEUTRAL COLORS */
+    --white:hsl(0, 0%, 100%);
+    --transparent-white-1:hsla(0, 0%, 100%, 0.75);
+    --transparent-white-2:hsla(0, 0%, 100%, 0.6);
+
+    /* FONTS */
+    --main-font-size:15px;
+    --lexendDeca:'Lexend Deca', sans-serif;
+    --inter: 'Inter', sans-serif;
+}
+
+/* TAG SELECTORS */
+body{
+    background-color: var(--very-dark-blue);
+    color:var(--white);
+    height:100%;
+    width:100%;
+    font-size: var(--main-font-size);
+    font-family: var(--inter);
+}
+
+/* CLASS SELECTORS */
+.container{
+    background-color: var(--dark-saturated-blue);
+    border-radius: 7px;
+    display: flex;
+    flex-direction: row;
+    margin:10em auto;
+    width: 80%;
+}
+
+.item{
+    flex: 1 1 50%;
+    padding:2%;
+    /* margin:15%; */
+}
+
+/* IMAGE */
+.image{
+    position: relative;
+}
+
+.side-image{
+    border-top-right-radius: 7px;
+    border-bottom-right-radius: 7px;
+    position: relative;
+    height:100%;
+    width:100%;
+}
+
+.image-box{ 
+    background-color: var(--soft-voilet);
+    width:100%;
+    height:100%;
+    filter: opacity(35%);
+    position: absolute;
+    z-index: 2;
+}  
+/* CONTENT */
+.content{
+    color: var(--transparent-white-1);
+    font-family: 'Inter', sans-serif; 
+    font-weight: 400;
+    margin: 0.9em 2em;
+    width:80%;
+    padding:2%;
+    padding-bottom: 0;
+}
+
+.content-data{
+    width:80%;
+    font-weight: 400;
+    font-size: 1.5ch;
+    line-height: 2;
+}
+
+.title{
+    color: var(--white);
+    font-size:3.7ch;   
+    font-weight:700;
+}
+
+.title >span{
+    color: var(--soft-voilet);
+}
+
+
+/* STATS CLASS */
+
+.stats{
+    display:flex;
+    justify-content: space-evenly;
+    align-content: center;
+    margin: 5% 2% 2%;
+}
+
+.stat-items{
+    margin:2%;
+    flex:1 1 50%;
+    padding:0 0.5rem;
+}
+
+.stat-items h3{
+    
+    font-family: var(--inter);
+    font-weight: 700;
+    font-size: 2.5ch;
+    margin:2%;
+    padding-bottom:0;
+}
+
+.stat-items p{
+    color: var(--transparent-white-2);
+    font-family: var(--lexendDeca);
+    font-weight: 400;
+    font-size: 1.3ch;
+}
+
+
+/* MEDIA QUERY */
+
+@media (max-width : 1044px) and (min-width :375px)
+{
+    .container{
+        flex-direction: column-reverse;
+    }
+
+    .stats{
+        flex-direction: column;
+        align-content: center;
+    }
+
+    .stat-items{
+        justify-items: center;
+        display: flex;
+        justify-content: center;
+    }
+
+    .content-data{
+        text-align: center;
+        margin-left: 1.3rem;
+    }
+
+    .title{
+        text-align: center;
+    }
+
+}
